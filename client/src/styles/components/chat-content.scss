@@ -1,0 +1,59 @@
+.chat-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 70px;
+
+    * {
+        font-size: 13px;
+    }
+
+    .chat-image {
+        float: left;
+    }
+
+    .preview {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 10px;
+        margin-left: 70px;
+
+        .name,
+        .last-message {
+            @extend %one-line;
+            max-width: 88%;
+        }
+
+        .date,
+        .count-new-messages {
+            float: right;
+            user-select: none;
+        }
+
+        .name {
+            font-size: 14px;
+            font-weight: 700;
+            padding-right: 0.5em;
+        }
+
+        .count-new-messages {
+            display: none;
+
+            &.visible {
+                position: relative;
+                top: 4px;
+                @extend %center-content;
+                @include circle(22px);
+                @media (max-width: $bpM) {
+                    top: 0px;
+                }
+            }
+
+            div {
+                font-size: 11px;
+                font-weight: 700;
+            }
+        }
+    }
+}

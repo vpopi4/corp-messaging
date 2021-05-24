@@ -1,0 +1,40 @@
+.input-contaner {
+    overflow: hidden;
+
+    textarea,
+    input {
+        padding: 0.5em;
+        background-color: inherit;
+        font-size: 15px;
+        resize: none;
+    }
+}
+
+.input-contaner.search {
+    @extend %between-center-content;
+
+    i,
+    input {
+        padding: 0.5em;
+        color: #acacac;
+    }
+
+    input {
+        flex: 1 1 auto;
+        background-color: inherit;
+        font-size: 15px;
+        margin-left: -0.4em;
+    }
+}
+
+.input-contaner.chat-input {
+    @extend %between-center-content;
+    
+    .icon {
+        padding: 0.5em;
+        color: #acacac;
+    }
+    textarea {
+        flex: 1 1 auto;
+    }
+}

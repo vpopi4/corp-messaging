@@ -1,0 +1,21 @@
+.chat-image {
+    position: relative;
+    padding: 10px;
+    @include circle(70px);
+
+    img {
+        user-select: none;
+        @include circle(100%);
+    }
+
+    .online-indicator {
+        @extend %center-content;
+        @include circle(14px);
+        div {
+            @include circle(10px);
+        }
+        position: absolute;
+        top: 46px;
+        left: 46px;
+    }
+}

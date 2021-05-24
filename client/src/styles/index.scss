@@ -1,0 +1,52 @@
+$bpXXL: 1400px;
+$bpXL: 1200px;
+$bpL: 992px;
+$bpM: 768px;
+$bpS: 400px;
+$headerHeight: 50px;
+
+%center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%between-center-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%between-stretch-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+%one-line {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+@mixin circle($rad) {
+    width: $rad;
+    height: $rad;
+    border-radius: 50%;
+}
+
+@import "./defaultStyles.scss";
+@import "./app.scss";
+@import "./components/header.scss";
+@import "./components/input-contaner.scss";
+@import "./components/chat-image.scss";
+@import "./components/chat-content.scss";
+@import "./components/message.scss";
+@import "./pages/chat-list.scss";
+@import "./pages/chat-area.scss";
+@import "./pages/coming-soon.scss";
+@import "./pages/home.scss";
+@import "./pages/sign-in.scss";
+@import "./colors.scss";

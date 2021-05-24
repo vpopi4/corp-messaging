@@ -1,0 +1,47 @@
+div.page.chat-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    .chat-output {
+        flex: 1 1 auto;
+        overflow: auto;
+    }   
+
+    button {
+        @include circle(35px);
+        background-color: transparent;
+        border: 0;
+        margin: 0.5rem;
+        &:hover {
+            background-color: slategray;
+        }
+    }
+    .chat-profile {
+        article {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            .chat-image {
+                flex: 0 0 50px;
+                @include circle(50px);
+                padding: 7px;
+            }
+            .title {
+                flex: 1 1 auto;
+                font-size: 13px;
+                margin-left: 0.5rem;
+                .name {
+                    @extend %one-line;
+                    font-weight: 700;
+                }
+                .info {
+                    @extend %one-line;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+
+}

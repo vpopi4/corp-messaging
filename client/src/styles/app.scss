@@ -1,0 +1,49 @@
+.contaner {
+    margin: auto;
+    // adaptation styles
+    max-width: $bpXXL + 200px;
+
+    @media (max-width: $bpXXL + 300px) {
+        max-width: $bpXXL - 100px;
+    }
+
+    @media (max-width: $bpXXL) {
+        max-width: $bpXL - 100px;
+    }
+
+    @media (max-width: $bpXL) {
+        max-width: 90%;
+    }
+
+    @media (max-width: $bpM) {
+        max-width: 100%;
+
+        header & {
+            max-width: 95%;
+        }
+    }
+}
+
+main {
+    // positioning element to the viewport's height
+    height: calc(100vh - 50px);
+    overflow: hidden;
+    // height inheritance
+    .contaner {
+        height: 95%;
+        overflow: hidden;
+
+        @media (max-width: $bpM) {
+            height: 100%;
+        }
+
+        > div.page {
+            height: 100%;
+            overflow: auto;
+        }
+    }
+
+    .contaner {
+        overflow: auto;
+    }
+}

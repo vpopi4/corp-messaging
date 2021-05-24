@@ -1,0 +1,27 @@
+div.page.chat-list {
+    display: flex;
+    flex-direction: column;
+
+    section {
+        margin: 0.4em 0.6em;
+
+        &.search {
+            flex: 0 0 auto;
+            margin-bottom: 0;
+            .icon {
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: $bpM) {
+            margin: 0.5em;
+        }
+    }
+
+    section {
+        overflow: auto;
+        article {
+            margin: 0.5rem;
+        }
+    }
+}

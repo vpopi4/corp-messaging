@@ -1,0 +1,9 @@
+div.page.coming-soon {
+    @extend %center-content;
+}
+
+div.page.profile {
+    button {
+        padding: 0.5em;
+    }
+}

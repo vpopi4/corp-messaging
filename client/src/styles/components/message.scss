@@ -1,0 +1,53 @@
+.message {
+    $fs: 14px;
+    $image-size: 50px;
+
+    display: flex;
+    padding: 0.5em 0;
+    font-size: $fs;
+
+    .chat-image {
+        @include circle($image-size);
+        padding: 0px;
+        margin-left: 0.5em;
+        flex: 0 0 $image-size;
+    }
+
+    .message-box {
+        display: flex;
+        flex-direction: column;
+        max-width: 75%;
+        border-radius: 15px;
+        margin: 0 0.5em;
+        padding: 0.6em 1em;
+
+        .name {
+            @extend %one-line;
+            font-weight: 700;
+            padding-bottom: 0.3em;
+        }
+
+        .time {
+            align-self: flex-end;
+            font-size: $fs - 2px;
+        }
+    }
+
+    &.self {
+        justify-content: flex-end;
+
+        .chat-image {
+            order: 1;
+            margin-left: 0;
+            margin-right: 0.5em;
+        }
+    }
+
+    @media (max-width: $bpM) {
+        font-size: $fs - 1px;
+
+        .message-box .time {
+            font-size: $fs - 3px;
+        }
+    }
+}

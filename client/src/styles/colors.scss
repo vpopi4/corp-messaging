@@ -1,0 +1,93 @@
+$color: #ffffff;
+$color-hover: #dadada;
+
+$main-color: #3e5d81;
+$main-color-hover: #324a66;
+
+* {
+    color: $color;
+}
+body {
+    background-color: #1f2023;
+}
+
+main {
+    color: #ffffff;
+}
+
+main .contaner {
+    background-color: #27292d;
+}
+
+main section {
+    background-color: #2d2f34;
+}
+
+main article {
+    background-color: #383b40;
+}
+
+header {
+    background-color: $main-color;
+
+    .title h1:hover,
+    li button:hover {
+        color: $color-hover;
+    }
+
+    li button {
+        background-color: inherit;
+        &:hover,
+        &.current {
+            border-bottom-color: #81eaff;
+        }
+        &:active {
+            background-color: $main-color-hover;
+        }
+    }
+}
+
+.online-indicator {
+    background-color: #383b40;
+}
+
+.online-indicator .online {
+    background-color: #55e48c;
+}
+
+.online-indicator .offline {
+    background-color: #868686;
+}
+
+.preview .count-new-messages.visible {
+    background-color: $main-color;
+}
+
+::-webkit-scrollbar-track {
+    background-color: inherit;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $main-color-hover;
+}
+
+.message {
+    background-color: transparent;
+
+    .message-box {
+        background-color: #515c68;
+    }
+}
+
+button {
+    background-color: $main-color;
+    &:hover {
+        background-color: $main-color-hover;
+    }
+    padding: 0.5em;
+}
+
+
+
+input, textarea {
+    background-color: inherit;
+}

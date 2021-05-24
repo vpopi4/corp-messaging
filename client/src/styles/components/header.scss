@@ -1,0 +1,70 @@
+header {
+    // nulling styles
+    button,
+    h1 {
+        cursor: pointer;
+        user-select: none;
+        border: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+    // positioning styles
+    height: $headerHeight;
+
+    .contaner {
+        box-sizing: border-box;
+        @extend %between-center-content;
+
+        h1:active {
+            position: relative;
+            top: 0.2em;
+        }
+
+        ul {
+            display: flex;
+
+            button {
+                display: flex;
+                align-items: center;
+                height: $headerHeight;
+                border-bottom: 0.3em solid transparent;
+                padding: 0 0.7em 0;
+                .icon.fas {
+                    font-size: 15px;
+                }
+                .icon.material-icons {
+                    font-size: 20px;
+                }
+                .text {
+                    margin-left: 0.4em;
+                }
+            }
+        }
+        // adaptation styles
+        @media (max-width: $bpM) {
+            h1 {
+                font-size: 16px;
+            }
+
+            .text {
+                display: none;
+            }
+        }
+
+        @media (max-width: $bpS) {
+            .title {
+                display: none;
+            }
+
+            nav {
+                width: 100%;
+
+                ul {
+                    justify-content: space-around;
+                }
+            }
+        }
+    }
+}
